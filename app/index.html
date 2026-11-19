@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI, all 55 trophies</title>
+<meta name="description" content="An offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap, missables and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p class="noscript-note">This guide needs JavaScript to load its trophy list and save your progress. The list itself lives in app/data/trophies.json.</p></noscript>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="standfirst">Every one of the 55 official trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a guide in our own words, a checklist that saves in your browser, a road to the platinum, and the missable ones flagged. Works offline; no account, no network.</p>
+  </div>
+  <div class="progress-card" id="progressCard" aria-label="Progress">
+    <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+    <p class="progress-label">trophies earned</p>
+    <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#/" data-view="checklist">Checklist</a>
+  <a href="#/roadmap" data-view="roadmap">Platinum roadmap</a>
+  <a href="#/missables" data-view="missables">Missable trophies</a>
+  <a href="#/about" data-view="about">Sources &amp; method</a>
+</nav>
+
+<section class="toolbar" id="toolbar">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy name or description…" autocomplete="off"></label>
+  <fieldset class="kind-filter" id="kindFilter">
+    <legend>Kind</legend>
+    <button type="button" data-kind="all" class="active">All</button>
+    <button type="button" data-kind="story">Story</button>
+    <button type="button" data-kind="missable">Missable</button>
+    <button type="button" data-kind="collectibles">Collectibles</button>
+    <button type="button" data-kind="activities">Activities</button>
+    <button type="button" data-kind="online">Online</button>
+  </fieldset>
+  <label class="grade">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="toggle"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+  <label class="toggle"><input id="earnedOnly" type="checkbox"> Earned only</label>
+  <span class="spacer"></span>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+</section>
+
+<main class="layout">
+  <section class="list-col" id="listCol" aria-label="Trophy list">
+    <p class="list-meta" id="listMeta"></p>
+    <ol class="trophy-list" id="trophyList"></ol>
+  </section>
+  <aside class="detail-col" id="detailCol" aria-label="Trophy guide"></aside>
+</main>
+
+<section class="page" id="pageCol" hidden></section>
+
+<footer class="foot">
+  <p>Names, descriptions and grades are PlayStation's own, as listed by Exophase and PSNProfiles. Guides are written for this page, in our own words, and cite their sources beside each trophy. The game released 2026-11-19: where a method is not yet confirmed in play, the guide says so instead of guessing. Unofficial fan guide — not affiliated with Rockstar Games, and it shows no Rockstar logo or artwork.</p>
+  <p><a href="#/about">How this guide was made</a> &middot; <button id="demoBtn" type="button" class="link-btn">Load demo progress</button> &middot; <button id="resetBtn" type="button" class="link-btn">Clear my progress</button></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
