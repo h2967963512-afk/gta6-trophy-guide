@@ -36,6 +36,7 @@ node serve.ts
 - `app/data/trophies.json` — the 55 trophies, their official details, the roadmap and the guides
 - `main.ts` — the entry program; `vendor/makefun-frontend.ts` — the kit's dossier library, unchanged
 - `screenshots/` — renders of the guide in a browser (see `shots.json`)
+- `shots.json` — the screenshot list: file order and captions used by the build
 
 Unofficial fan guide, not affiliated with Rockstar Games. No Rockstar logo, artwork or game screenshots are used. MIT licensed.
 
